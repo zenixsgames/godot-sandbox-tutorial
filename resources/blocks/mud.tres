@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BlockData" load_steps=2 format=3 uid="uid://cwfv2ipxin3fp"]
+
+[ext_resource type="Script" uid="uid://cwt8jsoj8l18e" path="res://scenes/block_data.gd" id="1_xg830"]
+
+[resource]
+script = ExtResource("1_xg830")
+tile_name = "mud"
+atlas_coords = Array[Vector2i]([Vector2i(4, 1), Vector2i(5, 0), Vector2i(5, 1)])
+metadata/_custom_type_script = "uid://cwt8jsoj8l18e"

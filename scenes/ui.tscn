@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1ragao76o6w7"]
+
+[ext_resource type="Texture2D" uid="uid://djhronh76hynb" path="res://assets/world_tileset.png" id="1_nt7q6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x4jx1"]
+texture = ExtResource("1_nt7q6")
+region_rect = Rect2(0, 16, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yev5y"]
+texture = ExtResource("1_nt7q6")
+region_rect = Rect2(64, 16, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdt2y"]
+texture = ExtResource("1_nt7q6")
+region_rect = Rect2(96, 16, 16, 16)
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="invbox" type="VBoxContainer" parent="."]
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="soilbox" type="HBoxContainer" parent="invbox"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="invbox/soilbox"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x4jx1")
+
+[node name="soil_lab" type="Label" parent="invbox/soilbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = ": 0"
+
+[node name="mudbox" type="HBoxContainer" parent="invbox"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="invbox/mudbox"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yev5y")
+
+[node name="mud_lab" type="Label" parent="invbox/mudbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = ": 0"
+
+[node name="stonebox" type="HBoxContainer" parent="invbox"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="invbox/stonebox"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gdt2y")
+
+[node name="stone_lab" type="Label" parent="invbox/stonebox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = ": 0"
